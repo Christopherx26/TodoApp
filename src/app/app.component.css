@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+body {
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 200vh;
+    }
+
+h2 {
+    background-color: #BCC6CC;
+    color: black;
+    font-family: 'Special Elite', cursive;
+    font-size: 3em; 
+    text-shadow: 2px 2px grey;
+}
+
+.padding {
+    float: right;
+}
+
+.top {
+    background: #BCC6CC;
+}
+
+.list-group-item {
+    background-color: #BCC6CC;
+    color: black;
+    font-family: 'Special Elite', cursive;
+    font-size: 2em; 
+    text-shadow: 2px 2px grey;
+}
+
+.btn {
+    font-family: 'Special Elite', cursive;
+    background-color: black;
+    color: white;
+    text-shadow: 1px 1px grey;
+    border-radius: 8px;
+}
+
+.btn2 {
+    background-color: black;
+    color: white;
+    text-shadow: 1px 1px grey;
+    border-radius: 8px;  
+}
+
+.btn:hover {background-color: black}
+
+.btn:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.container {
+    box-shadow: 10px 10px 5px black;
+}
