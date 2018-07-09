@@ -5,7 +5,7 @@
                 <div class="col top">
                     <h2 class="text-center mt-3"> {{ name }}'s Todo List</h2>
                     <div class="col text-center top pt-3 my-2">
-                        <input [(ngModel)]="todoInput">
+                        <input [(ngModel)]="todoInput" (keyup.enter)="createTodo()">
                         <button class="btn ml-5" (click)="createTodo()">
                             Add Task</button>
                     </div>
@@ -15,7 +15,7 @@
                 <div ng-repeat="x in todoList" class="list-group-item container">
                     <ul>
                         <li *ngFor="let chore of todos">
-                            {{chore}}
+                            {{ chore }}
                             <span class="padding">
                                 <input class="form-check-input px5" type="checkbox" value="" id="defaultCheck1">
                                 <button class="btn2 far fa-edit mr-1" (click)="editTodo(chore)"></button>
