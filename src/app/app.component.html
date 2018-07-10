@@ -8,6 +8,11 @@
                         <input [(ngModel)]="todoInput" (keyup.enter)="createTodo()">
                         <button class="btn ml-5" (click)="createTodo()">
                             Add Task</button>
+
+                        <div class="col text-right mb-3">
+                            <button class="btn" (click)="deleteAllTodos()">Delete All</button>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -15,10 +20,11 @@
                 <div ng-repeat="x in todoList" class="list-group-item container">
                     <ul>
                         <li *ngFor="let chore of todos">
-                            {{ chore }}
+                            <span [ngClass]="{'strike': chore.isChecked}">{{ chore.name }}</span>
                             <span class="padding">
-                                <input class="form-check-input px5" type="checkbox" value="" id="defaultCheck1">
-                                <button class="btn2 far fa-edit mr-1" (click)="editTodo(chore)"></button>
+                                <i *ngIf="chore.isChecked === false" (click)="checkOffTodo(chore)" class="far fa-square"></i>
+                                <i *ngIf="chore.isChecked === true" (click)="checkOffTodo(chore)" class="far fa-check-square"></i>
+                                <button class="btn2 far fa-edit mx-2" (click)="editTodo(chore)"></button>
                                 <button class="btn2 far fa-trash-alt" (click)="deleteTodo(chore)"></button>
                             </span>
                         </li>

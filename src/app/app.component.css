@@ -58,3 +58,8 @@ h2 {
 .container {
     box-shadow: 10px 10px 5px black;
 }
+
+.strike {
+    text-decoration: line-through;
+    color: red;
+}
